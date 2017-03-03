@@ -92,6 +92,16 @@ If you import from the index file, the imported component comes with all depende
 import { AppBar } from 'react-toolbox/lib/app_bar';
 ```
 
+### Component minus CSS modules (react-toolbox-themr)
+
+When using tools like `create-react-app`, you may not want to modify the default configuration in order to support the PostCSS/cssnext stylesheets. In these cases you can use [react-toolbox-themr](https://github.com/react-toolbox/react-toolbox-themr) and generate a static stylesheet and theme to import.
+
+When using [react-toolbox-themr](https://github.com/react-toolbox/react-toolbox-themr), you'll want to import the component minus the CSS Modules but with the theming functionality. The default export from the component file includes this.
+
+```js
+import AppBar from 'react-toolbox/lib/app_bar/AppBar';
+```
+
 ### Raw component
 
 If you import from the component definition, the imported component is bundled with its dependencies, but it does not include any styles. This means no CSS will be bundled, and the component markup will **not** include any classname. It's your responsibility to provide a theme to the component to be properly styled. You can do so via properties or context. For example:
